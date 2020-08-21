@@ -23,3 +23,9 @@ Route::get('/explore', 'MoviesController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+	Paystack work
+*/
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
