@@ -19,6 +19,10 @@ class PagesController extends Controller
     {
         return view('template.about');
     }
+    public function pay()
+    {
+        return view('template.payment');
+    }
 
     /**
      * Show the form for creating a new resource.

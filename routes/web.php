@@ -27,5 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
 	Paystack work
 */
+Route::get('/pay', 'PagesController@pay');
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+
+Route::get('/test', function () {
+	return view('test');
+});
